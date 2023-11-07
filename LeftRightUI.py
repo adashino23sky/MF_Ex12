@@ -86,8 +86,7 @@ def load_conversation():
     if not hasattr(st.session_state, "conversation"):
         llm = ChatOpenAI(
             model_name="gpt-4",
-            temperature=0
-        )
+            temperature=0)
         memory = ConversationBufferMemory(return_messages=True)
         st.session_state.conversation = ConversationChain(
             memory=memory,
