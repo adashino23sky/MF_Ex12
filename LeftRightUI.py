@@ -96,7 +96,7 @@ prompt = ChatPromptTemplate.from_messages([
 #@st.cache_resource
 #def load_conversation():
     #llm = ChatOpenAI(
-        #model_name="gpt-4",
+        #model_name="gpt-3.5-turbo",
         #temperature=0
     #)
     #memory = ConversationBufferMemory(return_messages=True)
