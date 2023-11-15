@@ -39,7 +39,7 @@ template = """
 シナリオ：
 チャットボットと私は同じ日本の大学に通い、同じ講義を受けている大学生になりきります。
 今、講義の途中、先生が、二人組でグループワークをするよう指示しました。
-二人でテーマについて、自分の意見を主張し、簡単な議論をします。
+二人でテーマについて、対等な関係で、自分の意見を主張し、簡単な議論をします。
 お互いチャット上の匿名のやりとりになります。
 会話を終えたら、もう二人が会って話すことはありません。
 
@@ -77,7 +77,6 @@ Haidtの道徳基盤理論では5つの基盤が存在します。
 
 チャットボットへの指示：
 上記の設定を踏まえて、私とステップバイステップで会話してください
-回答では平易な表現を心がけてください
 一回の回答につき、日本語で100文字以内で回答してください。
 自分の道徳基盤や道徳基盤理論に関することは一切明かさないでください。
 名前を聞かれたら、秘密であると答えてください。
@@ -147,7 +146,7 @@ def on_input_change():
     user_message = st.session_state.user_message
     conversation = load_conversation()
     with st.spinner("相手からの返信を待っています。。。"):
-        time.sleep(30)
+        time.sleep(1)
         answer = conversation.predict(input=user_message)
     st.session_state.generated.append(answer)
     st.session_state.past.append(user_message)
