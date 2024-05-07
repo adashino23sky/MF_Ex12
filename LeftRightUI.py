@@ -29,7 +29,7 @@ now = datetime.datetime.now(pytz.timezone('Asia/Tokyo'))
 #load_dotenv()
 
 #プロンプトテンプレートを作成
-with open('Prompt_pos_ind_euthanasia.txt', encoding = 'UTF-8', mode = 'r') as f:
+with open('Prompt_neg_ind_euthanasia.txt', encoding = 'UTF-8', mode = 'r') as f:
     s = f.read()
     template = s
 
